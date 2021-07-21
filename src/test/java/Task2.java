@@ -56,22 +56,22 @@ public class Task2 {
             }
         }
 
-//        List<WebElement> addToCartWebElement = driver.findElements(xpath("//app-buy-button[@class='toOrder ng-star-inserted']"));
-//        addToCartWebElement.get(0).click();
+        List<WebElement> addToCartWebElement = driver.findElements(xpath("//button[@class='buy-button goods-tile__buy-button ng-star-inserted']"));
+        addToCartWebElement.get(0).click();
 
 
-
-        new WebDriverWait(driver, 40).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-        List<WebElement> mostExpensiveWebElement = driver.findElements(xpath("//a[@class='goods-tile__picture ng-star-inserted']"));
-        mostExpensiveWebElement.get(0).click();
-
-
-        new WebDriverWait(driver, 40).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-        WebElement buttonBuy = driver.findElement(xpath("//app-product-buy-btn//button//span[contains(text(),'Купить')]"));
-        wait.until(ExpectedConditions.elementToBeClickable(buttonBuy));
-        buttonBuy.click();
+//
+//        new WebDriverWait(driver, 40).until(
+//                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+//        List<WebElement> mostExpensiveWebElement = driver.findElements(xpath("//a[@class='goods-tile__picture ng-star-inserted']"));
+//        mostExpensiveWebElement.get(0).click();
+//
+//
+//        new WebDriverWait(driver, 40).until(
+//                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+//        WebElement buttonBuy = driver.findElement(xpath("//app-product-buy-btn//button//span[contains(text(),'Купить')]"));
+//        wait.until(ExpectedConditions.elementToBeClickable(buttonBuy));
+//        buttonBuy.click();
 
 
 
@@ -94,9 +94,9 @@ public class Task2 {
 //        .effect2:nth-child(2) .large-3:nth-child(3) > .reward_link_redeem_button_style")).Click();
 //        }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.close();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.close();
+    }
 }
 
